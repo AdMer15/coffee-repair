@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ShopView from '../views/ShopView.vue'
+import CartView from '../views/CartView.vue'
 import PricingView from '../views/PricingView.vue'
 import ImpressumView from '../views/ImpressumView.vue'
 import DatenschutzView from '../views/DatenschutzView.vue'
@@ -17,6 +18,11 @@ const router = createRouter({
       path: '/shop',
       name: 'shop',
       component: ShopView
+    },
+    {
+      path: '/warenkorb',
+      name: 'cart',
+      component: CartView
     },
     {
       path: '/preise',

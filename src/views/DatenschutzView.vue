@@ -2,9 +2,9 @@
     <div class="max-w-3xl mx-auto px-8 py-16">
         <h1 class="text-3xl font-light tracking-tight mb-8">Datenschutzerklärung</h1>
 
-        <div class="space-y-8 text-sm text-stone-700 leading-relaxed">
+        <div class="space-y-8 text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">1. Verantwortlicher</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">1. Verantwortlicher</h2>
                 <p>
                     Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
                 </p>
@@ -21,7 +21,7 @@
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">2. Welche Daten wir verarbeiten</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">2. Welche Daten wir verarbeiten</h2>
                 <p>
                     Wenn du unser Formular zur Anmeldung einer Reparatur nutzt, erheben und speichern wir folgende Daten:
                 </p>
@@ -35,7 +35,7 @@
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">3. Zweck und Rechtsgrundlage der Verarbeitung</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">3. Zweck und Rechtsgrundlage der Verarbeitung</h2>
                 <p>
                     Die Verarbeitung dieser Daten dient ausschließlich der Bearbeitung deines Reparaturauftrags, der
                     Erstellung eines Kostenvoranschlags, der Kontaktaufnahme sowie der Abfrage des Reparaturstatus über
@@ -45,7 +45,7 @@
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">4. Speicherdauer</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">4. Speicherdauer</h2>
                 <p>
                     Wir speichern deine Daten so lange, wie es für die Abwicklung des Reparaturauftrags erforderlich ist,
                     sowie anschließend im Rahmen gesetzlicher Aufbewahrungspflichten (z. B. abgabenrechtlich
@@ -55,7 +55,7 @@
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">5. Hosting &amp; Auftragsverarbeiter</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">5. Hosting &amp; Auftragsverarbeiter</h2>
                 <p>
                     Zur Speicherung und Verwaltung der Formulardaten nutzen wir den Dienst <strong>Supabase</strong>
                     (Supabase Inc.). Die Daten werden auf Servern von Supabase in der Region
@@ -73,7 +73,7 @@
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">6. Weitergabe von Daten</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">6. Weitergabe von Daten</h2>
                 <p>
                     Eine Weitergabe deiner Daten an Dritte erfolgt nicht, außer soweit dies zur Vertragsabwicklung
                     erforderlich ist (z. B. an oben genannte Auftragsverarbeiter) oder wir gesetzlich dazu verpflichtet sind.
@@ -81,7 +81,7 @@
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">7. Deine Rechte</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">7. Deine Rechte</h2>
                 <p>Dir stehen nach der DSGVO grundsätzlich folgende Rechte zu:</p>
                 <ul class="list-disc list-inside mt-2 space-y-1">
                     <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
@@ -98,7 +98,7 @@
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">8. Beschwerderecht</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">8. Beschwerderecht</h2>
                 <p>
                     Du hast das Recht, dich bei der österreichischen Datenschutzbehörde zu beschweren, wenn du der Ansicht
                     bist, dass die Verarbeitung deiner Daten gegen die DSGVO verstößt:
@@ -106,14 +106,14 @@
                 <p class="mt-2">
                     Österreichische Datenschutzbehörde<br>
                     Barichgasse 40–42, 1030 Wien<br>
-                    <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer" class="text-amber-800 underline hover:text-amber-900">
+                    <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer" class="text-amber-800 underline hover:text-amber-900 dark:text-amber-400 dark:hover:text-amber-300">
                         www.dsb.gv.at
                     </a>
                 </p>
             </section>
 
             <section>
-                <h2 class="text-base font-semibold text-stone-900 mb-2">9. Datensicherheit</h2>
+                <h2 class="text-base font-semibold text-stone-900 dark:text-stone-100 mb-2">9. Datensicherheit</h2>
                 <p>
                     Diese Website nutzt eine SSL/TLS-Verschlüsselung, um die Übertragung vertraulicher Inhalte
                     (z. B. Anfragen über das Reparaturformular) zu schützen.
@@ -121,7 +121,7 @@
             </section>
 
             <section>
-                <p class="text-xs text-stone-400">
+                <p class="text-xs text-stone-400 dark:text-stone-500">
                     Stand: <span class="placeholder">[BITTE AUSFÜLLEN: Datum]</span> — Diese Datenschutzerklärung ersetzt keine
                     Rechtsberatung. Bitte lass sie vor Veröffentlichung von einer fachkundigen Person prüfen.
                 </p>
@@ -137,5 +137,10 @@
     background: #fffbeb;
     padding: 0 0.25rem;
     border-radius: 0.25rem;
+}
+
+:global(.dark) .placeholder {
+    color: #fbbf24;
+    background: rgba(180, 83, 9, 0.2);
 }
 </style>

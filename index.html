@@ -5,6 +5,17 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee & Repair</title>
+    <script>
+        // Setzt die "dark"-Klasse schon vor dem Rendern der App, damit die Seite
+        // beim Laden nicht kurz hell aufblitzt, wenn Dark Mode aktiv ist.
+        (function () {
+            var stored = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (stored === 'dark' || (!stored && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Hier lädt deine Vue-App -->

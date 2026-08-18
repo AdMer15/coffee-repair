@@ -3,18 +3,17 @@
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-3xl font-light">{{ $t('shop.title') }}</h1>
 
-            <!-- Kleiner Hinweis auf den Warenkorb (nur temporär hier, bis wir ihn in die Navigation bauen) -->
-            <div class="bg-stone-100 px-4 py-2 rounded-md text-sm font-medium">
+            <router-link to="/warenkorb" class="bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:text-stone-200 dark:hover:bg-stone-700 px-4 py-2 rounded-md text-sm font-medium transition">
                 {{ $t('shop.cartLabel', { count: cart.itemCount }) }}
-            </div>
+            </router-link>
         </div>
 
         <!-- Filter (Kategorien) -->
-        <div class="flex gap-4 mb-8 border-b border-stone-200 pb-4">
+        <div class="flex gap-4 mb-8 border-b border-stone-200 dark:border-stone-800 pb-4">
             <button v-for="cat in categories"
                     :key="cat"
                     @click="currentCategory = cat"
-                    :class="currentCategory === cat ? 'bg-stone-900 text-white' : 'bg-stone-100 hover:bg-stone-200'"
+                    :class="currentCategory === cat ? 'bg-stone-900 text-white' : 'bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:text-stone-200 dark:hover:bg-stone-700'"
                     class="px-4 py-2 rounded-md text-sm transition">
                 {{ $t(`shop.categories.${cat}`) }}
             </button>
@@ -24,17 +23,17 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div v-for="product in filteredProducts"
                  :key="product.id"
-                 class="border border-stone-200 rounded-lg p-6 flex flex-col justify-between">
+                 class="border border-stone-200 dark:border-stone-800 dark:bg-stone-900 rounded-lg p-6 flex flex-col justify-between">
                 <div>
                     <!-- Das Bild (Platzhalter von Unsplash) -->
-                    <img :src="product.image" :alt="$t(product.nameKey)" class="w-full h-48 object-cover rounded-md mb-4 bg-stone-100">
+                    <img :src="product.image" :alt="$t(product.nameKey)" class="w-full h-48 object-cover rounded-md mb-4 bg-stone-100 dark:bg-stone-800">
                     <h2 class="text-lg font-medium">{{ $t(product.nameKey) }}</h2>
-                    <p class="text-stone-500 text-sm mb-4">{{ product.price.toFixed(2) }} €</p>
+                    <p class="text-stone-500 dark:text-stone-400 text-sm mb-4">{{ product.price.toFixed(2) }} €</p>
                 </div>
 
                 <!-- Der wichtige Button -->
                 <button @click="addToCart(product)"
-                        class="w-full bg-stone-900 text-white py-2 rounded-md hover:bg-stone-700 transition">
+                        class="w-full bg-stone-900 text-white py-2 rounded-md hover:bg-stone-700 dark:bg-stone-700 dark:hover:bg-stone-600 transition">
                     {{ $t('shop.addToCartButton') }}
                 </button>
             </div>

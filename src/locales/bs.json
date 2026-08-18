@@ -1,6 +1,9 @@
 {
   "common": {
-    "brand": "COFFEE & REPAIR"
+    "brand": "COFFEE & REPAIR",
+    "switchToLight": "Prebaci na svijetli način rada",
+    "switchToDark": "Prebaci na tamni način rada",
+    "cartAriaLabel": "Korpa ({count} artikala)"
   },
   "nav": {
     "home": "Početna",
@@ -78,6 +81,19 @@
       "tamper": "Premium tamper (58mm)",
       "decaf": "Decaf Kolumbija"
     }
+  },
+  "cart": {
+    "title": "Vaša korpa",
+    "emptyMessage": "Vaša korpa je još uvijek prazna.",
+    "emptyCta": "Idi u prodavnicu",
+    "decreaseAriaLabel": "Smanji količinu",
+    "increaseAriaLabel": "Povećaj količinu",
+    "removeButton": "Ukloni",
+    "lineTotalLabel": "Međuzbir:",
+    "totalLabel": "Ukupno:",
+    "checkoutButton": "Završi narudžbu",
+    "continueShoppingCta": "Nastavi kupovinu",
+    "toastCheckoutSuccess": "Hvala na vašoj narudžbi! Uspješno je poslana."
   },
   "pricing": {
     "title": "Transparentni kalkulator cijena",

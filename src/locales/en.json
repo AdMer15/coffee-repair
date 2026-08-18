@@ -1,6 +1,9 @@
 {
   "common": {
-    "brand": "COFFEE & REPAIR"
+    "brand": "COFFEE & REPAIR",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "cartAriaLabel": "Cart ({count} items)"
   },
   "nav": {
     "home": "Home",
@@ -78,6 +81,19 @@
       "tamper": "Premium Tamper (58mm)",
       "decaf": "Decaf Colombia"
     }
+  },
+  "cart": {
+    "title": "Your Cart",
+    "emptyMessage": "Your cart is empty.",
+    "emptyCta": "Go to Shop",
+    "decreaseAriaLabel": "Decrease quantity",
+    "increaseAriaLabel": "Increase quantity",
+    "removeButton": "Remove",
+    "lineTotalLabel": "Subtotal:",
+    "totalLabel": "Total:",
+    "checkoutButton": "Complete Order",
+    "continueShoppingCta": "Continue Shopping",
+    "toastCheckoutSuccess": "Thank you for your order! It has been placed successfully."
   },
   "pricing": {
     "title": "Transparent Price Calculator",

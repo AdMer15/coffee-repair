@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+/* Aktiviert Tailwinds klassen-basierten Dark Mode: die Klasse "dark" am <html>-Tag
+   schaltet alle dark:-Varianten frei (statt der Media-Query prefers-color-scheme). */
+@custom-variant dark (&:where(.dark, .dark *));

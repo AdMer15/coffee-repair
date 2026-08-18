@@ -1,6 +1,6 @@
 <template>
-    <div class="relative inline-flex items-center bg-stone-100 rounded-full p-1 text-xs font-semibold select-none">
-        <div class="absolute top-1 bottom-1 rounded-full bg-amber-900 transition-all duration-300 ease-out"
+    <div class="relative inline-flex items-center bg-stone-100 dark:bg-stone-800 rounded-full p-1 text-xs font-semibold select-none">
+        <div class="absolute top-1 bottom-1 rounded-full bg-amber-900 dark:bg-amber-700 transition-all duration-300 ease-out"
              :style="sliderStyle"></div>
 
         <button v-for="lang in languages"
@@ -8,7 +8,7 @@
                 type="button"
                 @click="locale = lang.code"
                 class="relative z-10 w-9 py-1 rounded-full transition-colors duration-300 cursor-pointer"
-                :class="locale === lang.code ? 'text-white' : 'text-stone-600 hover:text-stone-900'">
+                :class="locale === lang.code ? 'text-white' : 'text-stone-600 hover:text-stone-900 dark:text-stone-300 dark:hover:text-white'">
             {{ lang.label }}
         </button>
     </div>
