@@ -1,0 +1,99 @@
+{
+  "common": {
+    "brand": "COFFEE & REPAIR"
+  },
+  "nav": {
+    "home": "Početna",
+    "shop": "Prodavnica",
+    "pricing": "Cijene i kalkulator"
+  },
+  "footer": {
+    "description": "Vaša profesionalna radionica za aparate na polugu i espresso automate, te pržionica za najfiniju specialty kafu.",
+    "hoursTitle": "Radno vrijeme",
+    "hoursWeekday": "Ponedjeljak – Petak: 08:00 – 18:00",
+    "hoursSaturday": "Subota: 09:00 – 13:00",
+    "contactTitle": "Kontakt i adresa",
+    "addressStreet": "Kaffee-Gasse 12",
+    "addressCity": "8010 Graz, Austrija",
+    "phone": "Tel: +43 316 123456",
+    "copyright": "© 2026 Coffee & Repair. Sva prava zadržana.",
+    "impressum": "Impresum",
+    "datenschutz": "Politika privatnosti",
+    "credit": "Dizajn i kod uz Vue.js & Tailwind"
+  },
+  "home": {
+    "hero": {
+      "title1": "Svježa specialty kafa.",
+      "title2": "Stručan servis.",
+      "subtitle": "Otkrijte ručno pržena zrna za kućnu upotrebu ili prepustite svoj aparat na polugu i espresso automat u iskusne, stručne ruke.",
+      "ctaShop": "Idi u prodavnicu",
+      "ctaRepair": "Zatraži popravku",
+      "imageAlt": "Kultura kafe"
+    },
+    "status": {
+      "title": "Provjeri status popravke",
+      "descriptionPrefix": "Unesite broj naloga (npr.",
+      "descriptionSuffix": ") kako biste vidjeli status.",
+      "inputPlaceholder": "npr. REP-8492",
+      "searchButton": "Pretraži",
+      "modelLabel": "Model:",
+      "infoLabel": "Info:",
+      "updatedLabel": "Zadnje ažuriranje:"
+    },
+    "form": {
+      "title": "Prijavi aparat za kafu na popravku",
+      "description": "Popunite kratak obrazac. Javit ćemo vam se u roku od 24 sata s procjenom troškova.",
+      "nameLabel": "Vaše ime",
+      "namePlaceholder": "Marko Marković",
+      "emailLabel": "E-mail adresa",
+      "emailPlaceholder": "marko{'@'}example.ba",
+      "modelLabel": "Marka i model",
+      "modelPlaceholder": "npr. DeLonghi Magnifica / Jura E8",
+      "typeLabel": "Vrsta uređaja",
+      "typeVollautomat": "Espresso automat",
+      "typeSiebtraeger": "Aparat na polugu",
+      "typeFilter": "Aparat za filter kafu",
+      "issueLabel": "Opis kvara",
+      "issuePlaceholder": "Šta je tačno problem?",
+      "submitButton": "Pošalji nalog za popravku",
+      "successPrefix": "Hvala! Vaš nalog je uspješno sačuvan u bazi podataka. Broj vašeg naloga je:",
+      "toastSuccess": "Nalog uspješno kreiran! Vaš broj naloga: {orderNumber}",
+      "toastError": "Greška prilikom spremanja u bazu podataka: {message}"
+    }
+  },
+  "shop": {
+    "title": "Naša ponuda",
+    "cartLabel": "Korpa: {count} artikala",
+    "categories": {
+      "all": "Sve",
+      "coffee": "Kafa",
+      "accessories": "Pribor"
+    },
+    "addToCartButton": "Dodaj u korpu",
+    "toastAddedToCart": "{product} je dodan u korpu!",
+    "products": {
+      "espresso": "Espresso mješavina \"Dark Roast\"",
+      "yirgacheffe": "Ethiopia Yirgacheffe (Filter)",
+      "milkPitcher": "Posuda za pjenjenje mlijeka (500ml)",
+      "tamper": "Premium tamper (58mm)",
+      "decaf": "Decaf Kolumbija"
+    }
+  },
+  "pricing": {
+    "title": "Transparentni kalkulator cijena",
+    "subtitle": "Odaberite vrstu aparata i željenu uslugu za početnu procjenu:",
+    "step1Label": "1. Vrsta aparata za kafu:",
+    "machineVollautomat": "Espresso automat (Jura, DeLonghi...)",
+    "machineSiebtraeger": "Aparat na polugu (E61 itd.)",
+    "step2Label": "2. Željena usluga:",
+    "serviceStandardTitle": "Mala inspekcija i održavanje",
+    "serviceStandardDesc": "Zamjena zaptivki, podmazivanje jedinice za kuhanje, osnovno čišćenje i uklanjanje kamenca",
+    "serviceGrosstorTitle": "Velika revizija / popravka",
+    "serviceGrosstorDesc": "Uklj. zamjenu pumpe ili grijača, intenzivno uklanjanje kamenca i dijagnostiku kvara",
+    "serviceDiagnoseTitle": "Samo dijagnostika kvara i procjena troškova",
+    "serviceDiagnoseDesc": "U potpunosti se uračunava kod naknadne popravke",
+    "priceLabel": "Procijenjena cijena:",
+    "pricePrefix": "oko",
+    "ctaButton": "Pošalji upit"
+  }
+}

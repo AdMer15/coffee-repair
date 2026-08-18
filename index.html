@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Repair</title>
+</head>
+<body>
+    <!-- Hier lädt deine Vue-App -->
+    <div id="app"></div>
+
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- Das unsichtbare Formular für Netlify (ganz unten, vor dem Ende des body) -->
+    <form name="reparatur" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="model" />
+        <input type="text" name="type" />
+        <textarea name="issue"></textarea>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<title>Kaffeemaschinen-Logo</title>
+<desc>Ein einfaches, flaches Icon einer Espressomaschine mit Tasse und Dampf, für Favicon/Logo.</desc>
+<rect width="512" height="512" fill="none"/>
+<rect x="146" y="120" width="220" height="70" rx="12" fill="#2b2320"/>
+<rect x="171" y="190" width="170" height="100" rx="8" fill="#2b2320"/>
+<rect x="206" y="202" width="100" height="18" rx="5" fill="#8b5e34"/>
+<circle cx="181" cy="258" r="10" fill="#8b5e34"/>
+<rect x="236" y="290" width="40" height="32" fill="#2b2320"/>
+<path d="M210 322 L302 322 L290 388 L222 388 Z" fill="#ffffff" stroke="#2b2320" stroke-width="6"/>
+<ellipse cx="256" cy="322" rx="46" ry="9" fill="#efe6da"/>
+<path d="M232 298 C227 281, 241 281, 236 264" stroke="#b0a89f" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M256 298 C251 281, 265 281, 260 264" stroke="#b0a89f" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M280 298 C275 281, 289 281, 284 264" stroke="#b0a89f" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

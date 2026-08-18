@@ -1,0 +1,99 @@
+{
+  "common": {
+    "brand": "COFFEE & REPAIR"
+  },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "pricing": "Pricing & Calculator"
+  },
+  "footer": {
+    "description": "Your professional workshop for espresso and bean-to-cup machines, and roastery for the finest specialty coffee.",
+    "hoursTitle": "Opening Hours",
+    "hoursWeekday": "Monday – Friday: 8:00 AM – 6:00 PM",
+    "hoursSaturday": "Saturday: 9:00 AM – 1:00 PM",
+    "contactTitle": "Contact & Address",
+    "addressStreet": "Kaffee-Gasse 12",
+    "addressCity": "8010 Graz, Austria",
+    "phone": "Phone: +43 316 123456",
+    "copyright": "© 2026 Coffee & Repair. All rights reserved.",
+    "impressum": "Legal Notice",
+    "datenschutz": "Privacy Policy",
+    "credit": "Design & Code with Vue.js & Tailwind"
+  },
+  "home": {
+    "hero": {
+      "title1": "Fresh Specialty Coffee.",
+      "title2": "Expert Repair Service.",
+      "subtitle": "Discover hand-roasted beans for home, or put your espresso machine and bean-to-cup machine in experienced, professional hands.",
+      "ctaShop": "Visit Shop",
+      "ctaRepair": "Request Repair",
+      "imageAlt": "Coffee culture"
+    },
+    "status": {
+      "title": "Check Repair Status",
+      "descriptionPrefix": "Enter your order number (e.g.",
+      "descriptionSuffix": ") to see the current status.",
+      "inputPlaceholder": "e.g. REP-8492",
+      "searchButton": "Search",
+      "modelLabel": "Model:",
+      "infoLabel": "Info:",
+      "updatedLabel": "Last update:"
+    },
+    "form": {
+      "title": "Register Coffee Machine for Repair",
+      "description": "Fill out the short form below. We'll get back to you within 24 hours with a cost estimate.",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "john{'@'}example.com",
+      "modelLabel": "Brand & Model",
+      "modelPlaceholder": "e.g. DeLonghi Magnifica / Jura E8",
+      "typeLabel": "Device Type",
+      "typeVollautomat": "Bean-to-Cup Machine",
+      "typeSiebtraeger": "Espresso Machine",
+      "typeFilter": "Filter Coffee Maker",
+      "issueLabel": "Issue Description",
+      "issuePlaceholder": "What exactly is the problem?",
+      "submitButton": "Submit Repair Request",
+      "successPrefix": "Thank you! Your order was successfully saved to the database. Your order number is:",
+      "toastSuccess": "Order successfully created! Your order number: {orderNumber}",
+      "toastError": "Error saving to the database: {message}"
+    }
+  },
+  "shop": {
+    "title": "Our Range",
+    "cartLabel": "Cart: {count} items",
+    "categories": {
+      "all": "All",
+      "coffee": "Coffee",
+      "accessories": "Accessories"
+    },
+    "addToCartButton": "Add to Cart",
+    "toastAddedToCart": "{product} was added to your cart!",
+    "products": {
+      "espresso": "Espresso Blend \"Dark Roast\"",
+      "yirgacheffe": "Ethiopia Yirgacheffe (Filter)",
+      "milkPitcher": "Milk Frothing Pitcher (500ml)",
+      "tamper": "Premium Tamper (58mm)",
+      "decaf": "Decaf Colombia"
+    }
+  },
+  "pricing": {
+    "title": "Transparent Price Calculator",
+    "subtitle": "Choose your machine type and the desired service for an initial estimate:",
+    "step1Label": "1. Type of Coffee Machine:",
+    "machineVollautomat": "Bean-to-Cup Machine (Jura, DeLonghi...)",
+    "machineSiebtraeger": "Espresso Machine (E61 etc.)",
+    "step2Label": "2. Desired Service:",
+    "serviceStandardTitle": "Basic Inspection & Maintenance",
+    "serviceStandardDesc": "Replace seals, grease brew unit, general cleaning & descaling",
+    "serviceGrosstorTitle": "Major Overhaul / Repair",
+    "serviceGrosstorDesc": "Incl. pump or heater replacement, intensive descaling & troubleshooting",
+    "serviceDiagnoseTitle": "Diagnosis & Cost Estimate Only",
+    "serviceDiagnoseDesc": "Fully credited towards a subsequent repair",
+    "priceLabel": "Estimated Price:",
+    "pricePrefix": "approx.",
+    "ctaButton": "Start Request"
+  }
+}

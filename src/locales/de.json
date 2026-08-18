@@ -1,0 +1,99 @@
+{
+  "common": {
+    "brand": "COFFEE & REPAIR"
+  },
+  "nav": {
+    "home": "Startseite",
+    "shop": "Shop",
+    "pricing": "Preise & Rechner"
+  },
+  "footer": {
+    "description": "Deine professionelle Fachwerkstatt für Siebträgermaschinen und Vollautomaten sowie Rösterei für feinsten Specialty Coffee.",
+    "hoursTitle": "Öffnungszeiten",
+    "hoursWeekday": "Montag – Freitag: 08:00 – 18:00 Uhr",
+    "hoursSaturday": "Samstag: 09:00 – 13:00 Uhr",
+    "contactTitle": "Kontakt & Adresse",
+    "addressStreet": "Kaffee-Gasse 12",
+    "addressCity": "8010 Graz, Österreich",
+    "phone": "Tel: +43 316 123456",
+    "copyright": "© 2026 Coffee & Repair. Alle Rechte vorbehalten.",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "credit": "Design & Code mit Vue.js & Tailwind"
+  },
+  "home": {
+    "hero": {
+      "title1": "Frischer Specialty Coffee.",
+      "title2": "Fachgerechte Reparatur.",
+      "subtitle": "Entdecke handgeröstete Bohnen für zu Hause oder gib deine Siebträgermaschine und deinen Vollautomaten in erfahrene Profi-Hände.",
+      "ctaShop": "Zum Shop",
+      "ctaRepair": "Reparatur anfragen",
+      "imageAlt": "Kaffeekultur"
+    },
+    "status": {
+      "title": "Reparaturstatus prüfen",
+      "descriptionPrefix": "Gib deine Auftragsnummer ein (z. B.",
+      "descriptionSuffix": "), um den Stand zu sehen.",
+      "inputPlaceholder": "Z.B. REP-8492",
+      "searchButton": "Suchen",
+      "modelLabel": "Modell:",
+      "infoLabel": "Info:",
+      "updatedLabel": "Letztes Update:"
+    },
+    "form": {
+      "title": "Kaffeemaschine zur Reparatur anmelden",
+      "description": "Fülle das kurze Formular aus. Wir melden uns innerhalb von 24 Stunden mit einem Kostenvoranschlag bei dir.",
+      "nameLabel": "Dein Name",
+      "namePlaceholder": "Max Mustermann",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "max{'@'}example.at",
+      "modelLabel": "Marke & Modell",
+      "modelPlaceholder": "z.B. DeLonghi Magnifica / Jura E8",
+      "typeLabel": "Gerätetyp",
+      "typeVollautomat": "Kaffeevollautomat",
+      "typeSiebtraeger": "Siebträgermaschine",
+      "typeFilter": "Filterkaffeemaschine",
+      "issueLabel": "Fehlerbeschreibung",
+      "issuePlaceholder": "Was genau ist das Problem?",
+      "submitButton": "Reparaturauftrag absenden",
+      "successPrefix": "Vielen Dank! Dein Auftrag wurde erfolgreich in der Datenbank gespeichert. Deine Auftragsnummer lautet:",
+      "toastSuccess": "Auftrag erfolgreich angelegt! Deine Auftragsnummer: {orderNumber}",
+      "toastError": "Fehler beim Speichern in der Datenbank: {message}"
+    }
+  },
+  "shop": {
+    "title": "Unser Sortiment",
+    "cartLabel": "Warenkorb: {count} Artikel",
+    "categories": {
+      "all": "Alle",
+      "coffee": "Kaffee",
+      "accessories": "Zubehör"
+    },
+    "addToCartButton": "In den Warenkorb",
+    "toastAddedToCart": "{product} wurde zum Warenkorb hinzugefügt!",
+    "products": {
+      "espresso": "Espresso Blend \"Dark Roast\"",
+      "yirgacheffe": "Ethiopia Yirgacheffe (Filter)",
+      "milkPitcher": "Milchaufschäum-Kännchen (500ml)",
+      "tamper": "Premium Tamper (58mm)",
+      "decaf": "Decaf Columbia"
+    }
+  },
+  "pricing": {
+    "title": "Transparenter Preisrechner",
+    "subtitle": "Wähle deinen Maschinentyp und die gewünschte Leistung für eine erste Einschätzung:",
+    "step1Label": "1. Art der Kaffeemaschine:",
+    "machineVollautomat": "Kaffeevollautomat (Jura, DeLonghi...)",
+    "machineSiebtraeger": "Siebträgermaschine (E61 etc.)",
+    "step2Label": "2. Gewünschter Service:",
+    "serviceStandardTitle": "Kleine Inspektion & Wartung",
+    "serviceStandardDesc": "Dichtungen wechseln, Brüheinheit fetten, Grundreinigung & Entkalkung",
+    "serviceGrosstorTitle": "Große Überholung / Reparatur",
+    "serviceGrosstorDesc": "Inkl. Pumpen- oder Heizungstausch, Intensiv-Entkalkung & Fehlersuche",
+    "serviceDiagnoseTitle": "Nur Fehlerdiagnose & Kostenvoranschlag",
+    "serviceDiagnoseDesc": "Wird bei einer anschließenden Reparatur voll angerechnet",
+    "priceLabel": "Geschätzter Richtpreis:",
+    "pricePrefix": "ca.",
+    "ctaButton": "Anfrage starten"
+  }
+}
