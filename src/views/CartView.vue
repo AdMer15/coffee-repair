@@ -57,10 +57,10 @@
                     <router-link to="/shop" class="text-sm font-medium text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-white transition">
                         {{ $t('cart.continueShoppingCta') }}
                     </router-link>
-                    <button @click="checkout"
-                            class="bg-amber-900 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-amber-800 dark:bg-amber-700 dark:hover:bg-amber-600 transition cursor-pointer">
+                    <router-link to="/checkout"
+                                 class="bg-amber-900 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-amber-800 dark:bg-amber-700 dark:hover:bg-amber-600 transition">
                         {{ $t('cart.checkoutButton') }}
-                    </button>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -68,17 +68,7 @@
 </template>
 
 <script setup>
-    import { useToast } from 'vue-toastification'
-    import { useI18n } from 'vue-i18n'
     import { useCartStore } from '@/stores/cart'
 
-    const toast = useToast()
-    const { t } = useI18n()
     const cart = useCartStore()
-
-    // Simulierter Checkout: keine echte Zahlung, nur Erfolgsmeldung + Warenkorb leeren
-    const checkout = () => {
-        toast.success(t('cart.toastCheckoutSuccess'))
-        cart.clearCart()
-    }
 </script>

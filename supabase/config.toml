@@ -1,0 +1,11 @@
+project_id = "yptbpjqwulhbsutcwvkj"
+
+# Beide Functions werden ohne Supabase-Auth-Login aufgerufen:
+# - create-payment-intent: vom anonymen Gast-Checkout im Shop
+# - stripe-webhook: direkt von Stripe (Absicherung erfolgt über die
+#   Stripe-Signatur/STRIPE_WEBHOOK_SECRET, nicht über einen Supabase-JWT)
+[functions.create-payment-intent]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
