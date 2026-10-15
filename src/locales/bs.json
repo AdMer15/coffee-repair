@@ -3,7 +3,9 @@
     "brand": "COFFEE & REPAIR",
     "switchToLight": "Prebaci na svijetli način rada",
     "switchToDark": "Prebaci na tamni način rada",
-    "cartAriaLabel": "Korpa ({count} artikala)"
+    "cartAriaLabel": "Korpa ({count} artikala)",
+    "openMenu": "Otvori meni",
+    "closeMenu": "Zatvori meni"
   },
   "nav": {
     "home": "Početna",
@@ -37,11 +39,12 @@
       "title": "Provjeri status popravke",
       "descriptionPrefix": "Unesite broj naloga (npr.",
       "descriptionSuffix": ") kako biste vidjeli status.",
-      "inputPlaceholder": "npr. REP-8492",
+      "inputPlaceholder": "npr. REP-7K3F9Q",
       "searchButton": "Pretraži",
       "modelLabel": "Model:",
       "infoLabel": "Info:",
-      "updatedLabel": "Zadnje ažuriranje:"
+      "updatedLabel": "Zadnje ažuriranje:",
+      "notFound": "Za ovaj broj naloga nije pronađena popravka. Molimo provjerite unos."
     },
     "form": {
       "title": "Prijavi aparat za kafu na popravku",
@@ -61,7 +64,8 @@
       "submitButton": "Pošalji nalog za popravku",
       "successPrefix": "Hvala! Vaš nalog je uspješno sačuvan u bazi podataka. Broj vašeg naloga je:",
       "toastSuccess": "Nalog uspješno kreiran! Vaš broj naloga: {orderNumber}",
-      "toastError": "Greška prilikom spremanja u bazu podataka: {message}"
+      "toastError": "Greška prilikom spremanja u bazu podataka: {message}",
+      "submittingButton": "Šalje se …"
     }
   },
   "shop": {

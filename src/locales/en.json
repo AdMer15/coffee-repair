@@ -3,7 +3,9 @@
     "brand": "COFFEE & REPAIR",
     "switchToLight": "Switch to light mode",
     "switchToDark": "Switch to dark mode",
-    "cartAriaLabel": "Cart ({count} items)"
+    "cartAriaLabel": "Cart ({count} items)",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "nav": {
     "home": "Home",
@@ -37,11 +39,12 @@
       "title": "Check Repair Status",
       "descriptionPrefix": "Enter your order number (e.g.",
       "descriptionSuffix": ") to see the current status.",
-      "inputPlaceholder": "e.g. REP-8492",
+      "inputPlaceholder": "e.g. REP-7K3F9Q",
       "searchButton": "Search",
       "modelLabel": "Model:",
       "infoLabel": "Info:",
-      "updatedLabel": "Last update:"
+      "updatedLabel": "Last update:",
+      "notFound": "No repair found for this order number. Please check your input."
     },
     "form": {
       "title": "Register Coffee Machine for Repair",
@@ -61,7 +64,8 @@
       "submitButton": "Submit Repair Request",
       "successPrefix": "Thank you! Your order was successfully saved to the database. Your order number is:",
       "toastSuccess": "Order successfully created! Your order number: {orderNumber}",
-      "toastError": "Error saving to the database: {message}"
+      "toastError": "Error saving to the database: {message}",
+      "submittingButton": "Sending …"
     }
   },
   "shop": {

@@ -25,7 +25,7 @@
         <section id="status" class="bg-stone-100 dark:bg-stone-900 py-16 border-y border-stone-200 dark:border-stone-800">
             <div class="max-w-xl mx-auto px-6 text-center">
                 <h2 class="text-2xl font-medium mb-3">{{ $t('home.status.title') }}</h2>
-                <p class="text-stone-600 dark:text-stone-400 text-sm mb-6">{{ $t('home.status.descriptionPrefix') }} <span class="font-mono bg-stone-200 dark:bg-stone-700 px-1 py-0.5 rounded text-amber-900 dark:text-amber-400">REP-8492</span>{{ $t('home.status.descriptionSuffix') }}</p>
+                <p class="text-stone-600 dark:text-stone-400 text-sm mb-6">{{ $t('home.status.descriptionPrefix') }} <span class="font-mono bg-stone-200 dark:bg-stone-700 px-1 py-0.5 rounded text-amber-900 dark:text-amber-400">REP-7K3F9Q</span>{{ $t('home.status.descriptionSuffix') }}</p>
 
                 <div class="flex gap-2">
                     <input v-model="searchQuery"
@@ -51,6 +51,11 @@
                     <p class="text-sm text-stone-700 dark:text-stone-300 mt-1"><strong>{{ $t('home.status.infoLabel') }}</strong> {{ searchResult.info }}</p>
                     <p class="text-xs text-stone-400 dark:text-stone-500 mt-3">{{ $t('home.status.updatedLabel') }} {{ searchResult.updated }}</p>
                 </div>
+
+                <!-- Hinweis, wenn zur eingegebenen Nummer nichts gefunden wurde -->
+                <p v-else-if="searched && !searching" class="mt-6 text-sm text-stone-600 dark:text-stone-400">
+                    {{ $t('home.status.notFound') }}
+                </p>
             </div>
         </section>
 
@@ -104,8 +109,8 @@
                                autocomplete="off">
                     </div>
 
-                    <button type="submit" class="w-full bg-stone-900 text-white py-3 rounded-md text-sm font-medium hover:bg-stone-800 dark:bg-stone-700 dark:hover:bg-stone-600 transition cursor-pointer">
-                        {{ $t('home.form.submitButton') }}
+                    <button type="submit" :disabled="submitting" class="w-full bg-stone-900 text-white py-3 rounded-md text-sm font-medium hover:bg-stone-800 dark:bg-stone-700 dark:hover:bg-stone-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                        {{ submitting ? $t('home.form.submittingButton') : $t('home.form.submitButton') }}
                     </button>
                 </form>
 
@@ -129,18 +134,27 @@
     // Status-Checker Logik
     const searchQuery = ref('')
     const searched = ref(false)
+    const searching = ref(false)
     const foundOrder = ref(null)
 
     const checkStatus = async () => {
-    searched.value = true
     const query = searchQuery.value.trim().toUpperCase()
 
-    if (!query) return
+    if (!query) {
+    searched.value = false
+    foundOrder.value = null
+    return
+    }
+
+    searched.value = true
+    searching.value = true
 
     // Live-Abfrage an Supabase
     const { data, error } = await supabase
    .rpc('get_repair_status', { p_auftragsnummer: query })
    .single()
+
+    searching.value = false
 
     if (error || !data) {
     foundOrder.value = null
@@ -168,6 +182,7 @@
 
     // Formular & Supabase Insert Logik
     const formSubmitted = ref(false)
+    const submitting = ref(false)
     const generatedOrderNumber = ref('')
 
     const form = ref({
@@ -179,12 +194,18 @@
     website: '' // Honeypot: bleibt bei echten Nutzern immer leer
     })
 
+    // 6 zufällige Zeichen (ohne leicht verwechselbare wie 0/O, 1/I) statt nur 4 Ziffern:
+    // Bei 9000 Möglichkeiten gäbe es schnell doppelte Nummern, und fremde Aufträge ließen sich einfach erraten.
+    const ORDER_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
     const generateOrderNumber = () => {
-    const randomNum = Math.floor(1000 + Math.random() * 9000)
-    return `REP-${randomNum}`
+    const bytes = crypto.getRandomValues(new Uint8Array(6))
+    const code = Array.from(bytes, b => ORDER_ALPHABET[b % ORDER_ALPHABET.length]).join('')
+    return `REP-${code}`
     }
 
     const submitRepairRequest = async () => {
+    if (submitting.value) return
+    submitting.value = true
     try {
     const auftragsnummer = generateOrderNumber()
 
@@ -229,6 +250,8 @@
       console.error('Fehler-Details:', error.details)
       console.error('Fehler-Hinweis:', error.hint)
       toast.error(t('home.form.toastError', { message: error.message }))
+    } finally {
+      submitting.value = false
     }
     }
 </script>

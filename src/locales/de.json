@@ -3,7 +3,9 @@
     "brand": "COFFEE & REPAIR",
     "switchToLight": "Zum hellen Modus wechseln",
     "switchToDark": "Zum dunklen Modus wechseln",
-    "cartAriaLabel": "Warenkorb ({count} Artikel)"
+    "cartAriaLabel": "Warenkorb ({count} Artikel)",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
   },
   "nav": {
     "home": "Startseite",
@@ -37,11 +39,12 @@
       "title": "Reparaturstatus prüfen",
       "descriptionPrefix": "Gib deine Auftragsnummer ein (z. B.",
       "descriptionSuffix": "), um den Stand zu sehen.",
-      "inputPlaceholder": "Z.B. REP-8492",
+      "inputPlaceholder": "Z.B. REP-7K3F9Q",
       "searchButton": "Suchen",
       "modelLabel": "Modell:",
       "infoLabel": "Info:",
-      "updatedLabel": "Letztes Update:"
+      "updatedLabel": "Letztes Update:",
+      "notFound": "Zu dieser Auftragsnummer wurde nichts gefunden. Bitte prüfe die Eingabe."
     },
     "form": {
       "title": "Kaffeemaschine zur Reparatur anmelden",
@@ -61,7 +64,8 @@
       "submitButton": "Reparaturauftrag absenden",
       "successPrefix": "Vielen Dank! Dein Auftrag wurde erfolgreich in der Datenbank gespeichert. Deine Auftragsnummer lautet:",
       "toastSuccess": "Auftrag erfolgreich angelegt! Deine Auftragsnummer: {orderNumber}",
-      "toastError": "Fehler beim Speichern in der Datenbank: {message}"
+      "toastError": "Fehler beim Speichern in der Datenbank: {message}",
+      "submittingButton": "Wird gesendet …"
     }
   },
   "shop": {

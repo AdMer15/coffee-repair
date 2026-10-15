@@ -9,6 +9,13 @@ import DatenschutzView from '../views/DatenschutzView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  // Beim Seitenwechsel nach oben springen, bei Ankern (#reparatur) zum Abschnitt scrollen
+  // und bei Zurück/Vor die alte Scroll-Position wiederherstellen
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+    if (to.hash) return { el: to.hash, behavior: 'smooth' }
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',

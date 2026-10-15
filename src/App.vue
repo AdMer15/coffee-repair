@@ -2,22 +2,24 @@
     <div class="min-h-screen bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-200 font-sans antialiased flex flex-col justify-between transition-colors">
 
         <!-- Navigation mit Router-Links -->
-        <header class="flex justify-between items-center px-8 py-6 border-b border-stone-200 dark:border-stone-800 max-w-7xl mx-auto w-full">
+        <header class="border-b border-stone-200 dark:border-stone-800 max-w-7xl mx-auto w-full">
+          <div class="flex justify-between items-center gap-4 px-4 sm:px-8 py-4 lg:py-6">
             <!-- Hier machen wir den Text zu einem klickbaren Link -->
-            <router-link to="/" class="text-xl font-bold tracking-tight text-amber-950 dark:text-amber-400 hover:opacity-80 transition">
+            <router-link to="/" class="text-lg sm:text-xl font-bold tracking-tight whitespace-nowrap text-amber-950 dark:text-amber-400 hover:opacity-80 transition">
                 {{ $t('common.brand') }}
             </router-link>
 
             <div class="flex items-center gap-6">
-                <nav class="space-x-8 text-sm font-medium">
-                    <router-link to="/" class="hover:text-amber-800 dark:hover:text-amber-400 transition">{{ $t('nav.home') }}</router-link>
-                    <router-link to="/shop" class="hover:text-amber-800 dark:hover:text-amber-400 transition">{{ $t('nav.shop') }}</router-link>
-                    <router-link to="/preise" class="hover:text-amber-800 dark:hover:text-amber-400 transition">{{ $t('nav.pricing') }}</router-link>
+                <!-- Desktop-Navigation (auf kleinen Bildschirmen übernimmt das Hamburger-Menü) -->
+                <nav class="hidden lg:flex gap-8 text-sm font-medium">
+                    <router-link v-for="link in navLinks" :key="link.to" :to="link.to" class="hover:text-amber-800 dark:hover:text-amber-400 transition">{{ $t(link.label) }}</router-link>
                 </nav>
 
                 <div class="flex items-center gap-2">
-                    <LanguageSwitcher />
-                    <DarkModeToggle />
+                    <div class="hidden lg:flex items-center gap-2">
+                        <LanguageSwitcher />
+                        <DarkModeToggle />
+                    </div>
                     <router-link to="/warenkorb"
                                  :aria-label="$t('common.cartAriaLabel', { count: cart.itemCount })"
                                  class="relative inline-flex items-center justify-center w-9 h-9 rounded-full text-stone-600 hover:bg-stone-100 hover:text-stone-900 dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-white transition">
@@ -33,8 +35,35 @@
                             {{ cart.itemCount }}
                         </span>
                     </router-link>
+
+                    <!-- Hamburger-Button: nur auf kleinen Bildschirmen sichtbar -->
+                    <button type="button"
+                            @click="menuOpen = !menuOpen"
+                            :aria-expanded="menuOpen"
+                            aria-controls="mobile-menu"
+                            :aria-label="menuOpen ? $t('common.closeMenu') : $t('common.openMenu')"
+                            class="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded-full text-stone-600 hover:bg-stone-100 hover:text-stone-900 dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-white transition cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="w-5 h-5">
+                            <path v-if="menuOpen" d="M18 6 6 18M6 6l12 12" />
+                            <path v-else d="M3 6h18M3 12h18M3 18h18" />
+                        </svg>
+                    </button>
                 </div>
             </div>
+          </div>
+
+          <!-- Mobiles Menü: klappt unter der Kopfzeile auf -->
+          <div v-if="menuOpen" id="mobile-menu" class="lg:hidden border-t border-stone-200 dark:border-stone-800 px-4 sm:px-8 pb-4">
+              <nav class="flex flex-col text-sm font-medium">
+                  <router-link v-for="link in navLinks" :key="link.to" :to="link.to" class="py-3 border-b border-stone-100 dark:border-stone-900 hover:text-amber-800 dark:hover:text-amber-400 transition">{{ $t(link.label) }}</router-link>
+              </nav>
+              <div class="flex items-center justify-between pt-4">
+                  <LanguageSwitcher />
+                  <DarkModeToggle />
+              </div>
+          </div>
         </header>
 
         <!-- HIER lädt der Router dynamisch entweder die Startseite oder den Shop rein! -->
@@ -79,7 +108,22 @@
 <script setup>
     import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
     import DarkModeToggle from '@/components/DarkModeToggle.vue'
+    import { ref, watch } from 'vue'
+    import { useRoute } from 'vue-router'
     import { useCartStore } from '@/stores/cart'
 
     const cart = useCartStore()
+    const route = useRoute()
+
+    const navLinks = [
+        { to: '/', label: 'nav.home' },
+        { to: '/shop', label: 'nav.shop' },
+        { to: '/preise', label: 'nav.pricing' }
+    ]
+
+    // Mobiles Menü schließt sich automatisch, sobald auf eine andere Seite navigiert wird
+    const menuOpen = ref(false)
+    watch(() => route.fullPath, () => {
+        menuOpen.value = false
+    })
 </script>

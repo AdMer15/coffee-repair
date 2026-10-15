@@ -21,7 +21,7 @@
 </script>
 
 <template>
-    <section class="p-6 bg-white rounded-xl shadow-md max-w-2xl mx-auto my-8 dark:bg-stone-900 dark:shadow-none dark:border dark:border-stone-800">
+    <section class="p-6 bg-white rounded-xl shadow-md max-w-2xl mx-4 sm:mx-auto my-8 dark:bg-stone-900 dark:shadow-none dark:border dark:border-stone-800">
         <h2 class="text-2xl font-bold mb-4 text-stone-800 dark:text-stone-100">{{ $t('pricing.title') }}</h2>
         <p class="text-stone-600 dark:text-stone-400 mb-6">{{ $t('pricing.subtitle') }}</p>
 
@@ -78,9 +78,9 @@
                 <span class="text-sm text-amber-900 dark:text-amber-400 block">{{ $t('pricing.priceLabel') }}</span>
                 <span class="text-3xl font-extrabold text-amber-800 dark:text-amber-400">{{ $t('pricing.pricePrefix') }} {{ calculatedPrice }} €</span>
             </div>
-            <a href="#kontakt" class="bg-amber-700 hover:bg-amber-800 text-white px-5 py-2.5 rounded-lg font-medium transition">
+            <router-link :to="{ path: '/', hash: '#reparatur' }" class="bg-amber-700 hover:bg-amber-800 text-white px-5 py-2.5 rounded-lg font-medium transition">
                 {{ $t('pricing.ctaButton') }}
-            </a>
+            </router-link>
         </div>
     </section>
 </template>

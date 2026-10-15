@@ -13,7 +13,7 @@
             <button v-for="cat in categories"
                     :key="cat"
                     @click="currentCategory = cat"
-                    :class="currentCategory === cat ? 'bg-stone-900 text-white' : 'bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:text-stone-200 dark:hover:bg-stone-700'"
+                    :class="currentCategory === cat ? 'bg-stone-900 text-white dark:bg-amber-700' : 'bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:text-stone-200 dark:hover:bg-stone-700'"
                     class="px-4 py-2 rounded-md text-sm transition">
                 {{ $t(`shop.categories.${cat}`) }}
             </button>
